@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook-P4-M12.5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            width: 95%;
+            margin: auto;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .dropdown {
+            margin-bottom: 20px;
+        }
+        .activity {
+            margin-bottom: 20px;
+        }
+        .banner {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
+    <script>
+        function updateActivities() {
+            const selectedTime = document.getElementById('class-time').value;
+            const activity2 = document.getElementById('activity-2');
+            const activity3Step7 = document.getElementById('activity-3-step-7');
+
+            if (selectedTime === '45') {
+                if (activity2) activity2.style.display = 'none';
+                if (activity3Step7) activity3Step7.style.display = 'block';
+            } else if (selectedTime === '40') {
+                if (activity2) activity2.style.display = 'none';
+                if (activity3Step7) activity3Step7.style.display = 'none';
+            } else {
+                if (activity2) activity2.style.display = 'block';
+                if (activity3Step7) activity3Step7.style.display = 'block';
+            }
+
+            document.getElementById('selected-time').innerText = 
+                "Tiempo efectivo de clase: " + selectedTime + " minutos";
+        }
+
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            content.style.display = content.style.display === "none" ? "block" : "none";
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Playbook-P4-M12.5</h1>
+    </div>
+    <div class="container">
+        <div class="dropdown">
+            <label for="class-time">Tiempo efectivo de Clase:</label>
+            <select id="class-time" onchange="updateActivities()">
+                <option value="50">50 minutos</option>
+                <option value="45">45 minutos</option>
+                <option value="40">40 minutos</option>
+            </select>
+        </div>
+        <h2 id="selected-time" class="time-title">Tiempo efectivo de clase: 50 minutos</h2>
+<!-- Actividad 0 -->
+<div id="activity-0" class="activity">
+    <div class="banner" onclick="toggleContent('activity-0-content')">
+        <div class="title"><strong>🔍Actividad 0: Revisión de Misión</strong></div>
+        <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 5px 0;">
+        <div class="subtitle" style="margin-top: 5px; font-size: 0.9em; color: #e0e0e0;">
+           Verificar que estén disponibles: Magic Boards, Cutebot, BBC Micro, Bloques de lego (un set por alumno).
+        </div>
+    </div>
+    <div id="activity-0-content" class="content">
+        <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+            <tr style="background-color: #f9f9f9;">
+                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Acción</th>
+                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Diálogo Maestro</th>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; vertical-align: top; border-right: 1px solid #ddd;">
+                    <strong>Paso 1:</strong> Proyectar Diapositiva 1 y verificar que estén disponibles: Magic Boards, Cutebot, BBC Micro, Bloques de lego (un set por alumno).
+                </td>
+                <td style="padding: 10px; vertical-align: top;">
+                    No aplica
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 1 -->
+<div id="activity-1" class="activity">
+    <div class="banner" onclick="toggleContent('activity-1-content')">
+        <div class="title"><strong>🎉Actividad 1: Saludo y Ritual Gnius Club</strong></div>
+        <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 5px 0;">
+        <div class="subtitle" style="margin-top: 5px; font-size: 0.9em; color: #e0e0e0;">
+            Proyección de diapositivas para dar la bienvenida, explorar emociones y presentar los objetivos del día.
+        </div>
+    </div>
+    <div id="activity-1-content" class="content">
+        <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+            <tr style="background-color: #f9f9f9;">
+                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Acción</th>
+                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Diálogo Maestro</th>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; vertical-align: top; border-right: 1px solid #ddd;">
+                    <strong>Paso 1:</strong> Proyectar Diapositiva 2 con el tema de la carrera de circuitos.
+                </td>
+                <td style="padding: 10px; vertical-align: top;">
+                    "¡Hola Genios del Circuito! 🌟 Hoy vamos a prepararnos para nuestra Gran Carrera de Circuitos. ¿Están listos para poner a prueba su velocidad y precisión?"
+                </td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; vertical-align: top; border-right: 1px solid #ddd;">
+                    <strong>Paso 2:</strong> Proyectar Diapositiva 3 "¿Cómo están?" con poses inspiradas en la carrera.
+                </td>
+                <td style="padding: 10px; vertical-align: top;">
+                    "¡Díganme cómo están hoy! Si se sienten emocionados, coloquen sus manos como si estuvieran conduciendo. Si necesitan un empujón extra de energía, hagan la señal de la bandera de inicio. ¡Vamos a prepararnos!"
+                </td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; vertical-align: top; border-right: 1px solid #ddd;">
+                    <strong>Paso 3:</strong> Proyectar Diapositiva 4 "Ritual de Agradecimiento" y guiar a los estudiantes en el ritual temático.
+                </td>
+                <td style="padding: 10px; vertical-align: top;">
+                    "Juntamos nuestras manos en agradecimiento por la oportunidad de aprender juntos hoy. '¡Gracias por estar aquí, Genios del Circuito! Hoy seremos rápidos, precisos y muy creativos!' 🚗✨"
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; vertical-align: top; border-right: 1px solid #ddd;">
+                    <strong>Paso 4:</strong> Proyectar Diapositiva 5 "Objetivos de la Carrera".
+                </td>
+                <td style="padding: 10px; vertical-align: top;">
+                    "Hoy, nuestros objetivos son tres: 1. Conocer las reglas de la Gran Carrera de Circuitos. 2. Programar maniobras rápidas y precisas. 3. Trabajar juntos para llegar a la meta. ¡Manos a la obra!"
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- Actividad 2 -->
+<div id="activity-2" class="activity">
+    <div class="banner" onclick="toggleContent('activity-2-content')">
+        <div class="title"><strong>🧠Actividad 2: Brain Vitamin</strong></div>
+        <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 5px 0;">
+        <div class="subtitle" style="margin-top: 5px; font-size: 0.9em; color: #e0e0e0;">
+            Ejercicio de construcción creativa para fomentar la precisión y el pensamiento crítico.
+        </div>
+    </div>
+    <div id="activity-2-content" class="content">
+        <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+            <tr style="background-color: #f9f9f9;">
+                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Acción</th>
+                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Diálogo Maestro</th>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; vertical-align: top; border-right: 1px solid #ddd;">
+                    <strong>Paso 1:</strong> Proyectar Diapositiva 6 "Construcción de Torres" y distribuir las piezas de Six Bricks a los estudiantes.
+                </td>
+                <td style="padding: 10px; vertical-align: top;">
+                    "¡Genios del Circuito! Vamos a construir torres con nuestras piezas. Pero aquí está el truco: ¡no podemos encajar las piezas entre sí! ¿Listos para el reto?"
+                </td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; vertical-align: top; border-right: 1px solid #ddd;">
+                    <strong>Paso 2:</strong> Proyectar Diapositiva 7 e Indicar que deben alternar manos o construir utilizando dos dedos para aumentar la dificultad del reto.
+                </td>
+                <td style="padding: 10px; vertical-align: top;">
+                    "¡Ahora usen solo dos dedos! ¿Quién puede construir la torre más alta sin que se caiga? ¡Vamos a probar nuestras habilidades de precisión!"
+                </td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; vertical-align: top; border-right: 1px solid #ddd;">
+                    <strong>Paso 3:</strong> Proyectar Diapositiva 8 y guiar una breve discusión sobre cómo mejorar las construcciones.
+                </td>
+                <td style="padding: 10px; vertical-align: top;">
+                    "¡Qué torres tan creativas! ¿Qué técnica les ayudó a construir mejor? ¿Cómo podemos aplicar estas habilidades para programar movimientos precisos en nuestro Cutebot?"
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- Actividad 3 -->
+<div id="activity-3" class="activity">
+    <div class="banner" onclick="toggleContent('activity-3-content')">
+        <div class="title"><strong>🚀Actividad 3: Challenge</strong></div>
+        <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 5px 0;">
+        <div class="subtitle" style="margin-top: 5px; font-size: 0.9em; color: #e0e0e0;">
+         Explicar el objetivo general del reto.
+        </div>
+    </div>
+    <div id="activity-3-content" class="content">
+        <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+            <tr style="background-color: #f9f9f9;">
+                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Acción</th>
+                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Diálogo Maestro</th>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; vertical-align: top; border-right: 1px solid #ddd;">
+                    <strong>Paso 1:</strong> Proyectar Diapositiva 9 "Gran Carrera de Circuitos" y explicar el objetivo general del reto.
+                </td>
+                <td style="padding: 10px; vertical-align: top;">
+                    "¡Genios del Circuito! Hoy enfrentaremos la Gran Carrera, donde deberán programar a su Cutebot para completar circuitos llenos de retos. ¿Listos para arrancar?"
+                </td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; vertical-align: top; border-right: 1px solid #ddd;">
+                    <strong>Paso 2:</strong> Proyectar Diapositiva 10 "Preparativos de Carrera".
+                </td>
+                <td style="padding: 10px; vertical-align: top;">
+                    "Antes de arrancar, asegúrense de tener todo listo: su Cutebot, bloques de construcción. ¡La preparación es la clave para ganar esta carrera!"
+                </td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; vertical-align: top; border-right: 1px solid #ddd;">
+                    <strong>Paso 3:</strong> Proyectar Diapositiva 11 "Recogiendo Materiales" y activar un temporizador de 3 minutos.
+                </td>
+                <td style="padding: 10px; vertical-align: top;">
+                    "Tienen 3 minutos para recoger todos los materiales necesarios: bloques, Cutebots y temporizadores. ¡Rápido, Genios! La carrera empieza pronto, así que prepárense bien."
+                </td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; vertical-align: top; border-right: 1px solid #ddd;">
+                    <strong>Paso 4:</strong> Proyectar Diapositiva 12 "Retos de la Gran Carrera" y explicar los niveles Rookie, Master y Hacker.
+                </td>
+                <td style="padding: 10px; vertical-align: top;">
+                    "¡Atención, Genios del Circuito! Aquí están los retos que enfrentarán hoy en nuestra Gran Carrera. Escuchen cuidadosamente y elijan el nivel que más los desafíe.<br>
+                    <strong>Rookie (Básico):</strong><br>
+                    - Objetivo: Completar un circuito en forma de "U".<br>
+                    - Instrucciones: Avancen en línea recta hacia el primer punto de control. Luego realicen un giro amplio en forma de "U" y regresen al punto de inicio con otra trayectoria recta.<br>
+                    - Condiciones: Incorporen al menos una línea recta y una curva amplia.<br>
+                    - Consejo: Practiquen el giro en "U" antes de intentarlo en el circuito completo.<br><br>
+                    <strong>Master (Intermedio):</strong><br>
+                    - Objetivo: Completar un circuito con líneas rectas, curvas cerradas y una diagonal en forma de "L".<br>
+                    - Instrucciones: Comiencen con una línea recta hasta el primer punto de control. Luego realicen un giro de 90° hacia la derecha o izquierda. Continúen por una trayectoria diagonal hasta el segundo punto y terminen con una curva cerrada para regresar al inicio.<br>
+                    - Condiciones: Usen al menos una línea recta, un giro en ángulo recto y una diagonal precisa.<br>
+                    - Consejo: Ajusten cuidadosamente los tiempos para cada segmento.<br><br>
+                    <strong>Hacker (Avanzado):</strong><br>
+                    - Objetivo: Completar un circuito en forma de "S" con combinaciones de líneas rectas y curvas.<br>
+                    - Instrucciones: Alternen trayectorias curvas hacia la derecha e izquierda, incorporando líneas rectas entre cada curva. Deténganse por 3 segundos en cada uno de los tres puntos marcados en el circuito. Esquiven los obstáculos móviles durante el recorrido.<br>
+                    - Condiciones: Incluyan al menos dos curvas, tres líneas rectas y paradas precisas en los puntos clave.<br>
+                    - Consejo: Ensayen cada curva individualmente antes de combinar todas las maniobras en la programación completa."
+                </td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; vertical-align: top; border-right: 1px solid #ddd;">
+                    <strong>Paso 5:</strong> Proyectar Diapositiva 13 y dar tiempo para que los equipos construyan su pista basándose en el diseño de su nivel (Rookie, Master, Hacker).
+                </td>
+                <td style="padding: 10px; vertical-align: top;">
+                    "¡Es momento de construir la pista! Usen los bloques para crear las líneas rectas, curvas y combinaciones según su nivel. ¡Asegúrense de que la pista cumpla con todos los requisitos del reto!"
+                </td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; vertical-align: top; border-right: 1px solid #ddd;">
+                    <strong>Paso 6:</strong> Proyectar Diapositiva 14 "Programación en Proceso". Los equipos trabajan en la programación, probando y ajustando según sea necesario.
+                </td>
+                <td style="padding: 10px; vertical-align: top;">
+                    "¡Es hora de programar! Asegúrense de que su Cutebot realice todas las maniobras necesarias: líneas rectas, curvas y paradas en puntos clave. ¡Vamos, genios del circuito!"
+                </td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; vertical-align: top; border-right: 1px solid #ddd;">
+                    <strong>Paso 7:</strong> Los equipos realizan pruebas en la pista y ajustan su programación según los errores detectados.
+                </td>
+                <td style="padding: 10px; vertical-align: top;">
+                    "¡Momento de probar! Asegúrense de que el Cutebot complete el circuito. Si algo falla, ajusten su programación y vuelvan a intentarlo. ¡Recuerden, el éxito está en los detalles!"
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; vertical-align: top; border-right: 1px solid #ddd;">
+                    <strong>Paso 8:</strong> Proyectar Diapositiva 16 "Revisión de Objetivos".
+                </td>
+                <td style="padding: 10px; vertical-align: top;">
+                    "¡Felicitaciones, Genios! Hoy completamos los movimientos básicos del Cutebot. ¡El circuito se cumplió por su gran trabajo en equipo!"
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- Actividad 4 -->
+<div id="activity-4" class="activity">
+    <div class="banner" onclick="toggleContent('activity-4-content')">
+        <div class="title"><strong>🤝Actividad 4: Team Gnius</strong></div>
+        <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 5px 0;">
+        <div class="subtitle" style="margin-top: 5px; font-size: 0.9em; color: #e0e0e0;">
+            Explicar cómo los roles permitirán que todos ayuden a mejorar lo que hicieron individualmente.
+        </div>
+    </div>
+    <div id="activity-4-content" class="content">
+        <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+            <tr style="background-color: #f9f9f9;">
+                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Acción</th>
+                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Diálogo Maestro</th>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; vertical-align: top; border-right: 1px solid #ddd;">
+                    <strong>Paso 1:</strong> Proyectar la Diapositiva 16 "Introducción al Team Gnius". Explicar cómo los roles permitirán que todos ayuden a mejorar lo que hicieron individualmente.
+                </td>
+                <td style="padding: 10px; vertical-align: top;">
+                    "¡Genios del Circuito! Ahora trabajaremos en equipo para asegurarnos de que todo lo que hicieron individualmente esté ajustado al máximo. Usaremos el Team CANVAS como nuestra guía. ¡Juntos somos mejores!"
+                </td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; vertical-align: top; border-right: 1px solid #ddd;">
+                    <strong>Paso 2:</strong> Proyectar la Diapositiva 17 "Formación de Equipos". Los estudiantes tendrán 1 minuto para: <br>
+                    1. Formar equipos de 3 personas.<br>
+                    2. Asignar roles: Líder, Programador y Observador.
+                </td>
+                <td style="padding: 10px; vertical-align: top;">
+                    "Tienen 1 minuto para formar equipos de 3 personas. Cada rol tendrá una tarea importante: Liderar, revisar código o analizar mejoras en los circuitos. ¡Recuerden que todos los roles son esenciales!"
+                </td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; vertical-align: top; border-right: 1px solid #ddd;">
+                    <strong>Paso 3:</strong> Proyectar la Diapositiva 18 "Team CANVAS". Cada equipo debe:<br>
+                    1. Revisar lo que hizo cada integrante de forma individual.<br>
+                    2. Escribir cómo pueden ajustarlo o mejorarlo según su rol.<br>
+                    3. Definir un plan de apoyo conjunto para las áreas más débiles.
+                </td>
+                <td style="padding: 10px; vertical-align: top;">
+                    "Usen el Team CANVAS para analizar el trabajo individual: ¿Qué ajustes necesita el código? ¿El circuito está bien diseñado? ¿Qué idea nueva podemos aportar? Líderes, guíen la conversación para que todos participen."
+                </td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; vertical-align: top; border-right: 1px solid #ddd;">
+                    <strong>Paso 4:</strong> Proyectar la Diapositiva 19. Los equipos trabajan en las siguientes tareas:<br>
+                    1. Líder: Coordina y organiza la conversación.<br>
+                    2. Programador: Ajusta los códigos según las sugerencias del equipo.<br>
+                    3. Observador: Analiza los circuitos y propone cambios prácticos.
+                </td>
+                <td style="padding: 10px; vertical-align: top;">
+                    "Ahora es momento de ayudarse. Líderes, organicen las tareas; Programadores, ajusten los códigos con las ideas del equipo; y Observadores, revisen que los circuitos sean funcionales. ¡El apoyo mutuo nos llevará al éxito!"
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; vertical-align: top; border-right: 1px solid #ddd;">
+                    <strong>Paso 5:</strong> Proyectar la diapositiva 20 y supervisar mientras los equipos:<br>
+                    1. Ajustan el código de los Cutebots.<br>
+                    2. Corrigen los circuitos según las observaciones realizadas.<br>
+                    3. Verifican que los cambios resuelvan los problemas identificados.
+                </td>
+                <td style="padding: 10px; vertical-align: top;">
+                    "¡Genios, es momento de aplicar las mejoras! Cada ajuste que hagan ahora hará que sus Cutebots y circuitos sean aún más impresionantes. ¡Trabajando juntos logramos cosas increíbles!"
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- Actividad 5 -->
+<div id="activity-5" class="activity">
+    <div class="banner" onclick="toggleContent('activity-5-content')">
+        <div class="title"><strong>🏅Actividad 5: Honor de Lab</strong></div>
+        <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 5px 0;">
+        <div class="subtitle" style="margin-top: 5px; font-size: 0.9em; color: #e0e0e0;">
+            Reflexión final y organización del espacio de trabajo para cerrar con respeto y orden.
+        </div>
+    </div>
+    <div id="activity-5-content" class="content">
+        <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+            <tr style="background-color: #f9f9f9;">
+                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Acción</th>
+                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Diálogo Maestro</th>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 10px; vertical-align: top; border-right: 1px solid #ddd;">
+                    <strong>Paso 1:</strong> Proyectar la diapositiva 21 "Revisión de Objetivos". Leer los objetivos logrados y motivar a los estudiantes a reconocer su esfuerzo.
+                </td>
+                <td style="padding: 10px; vertical-align: top;">
+                    "¡Genios del Circuito! Hoy hemos logrado grandes cosas: programar circuitos complejos, trabajar en equipo y superar retos difíciles. ¡Felicidades, el zoológico ahora tiene genios al volante!"
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; vertical-align: top; border-right: 1px solid #ddd;">
+                    <strong>Paso 2:</strong> Proyectar la diapositiva 22 "Organización del Espacio". Guiar a los estudiantes para que recojan sus materiales y dejen todo limpio y ordenado.
+                </td>
+                <td style="padding: 10px; vertical-align: top;">
+                    "Antes de irnos, honremos nuestro espacio de trabajo recogiendo todos los materiales. Recuerden que el orden refleja el esfuerzo que pusieron hoy. ¡Gracias por ser tan genios!"
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+    </div> <!-- Cierre del contenedor principal -->
+
+    <!-- Scripts adicionales -->
+    <script>
+        // Agregar scripts adicionales si es necesario
+    </script>
+</body>
+</html>
